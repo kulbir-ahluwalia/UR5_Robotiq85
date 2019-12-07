@@ -5,3 +5,5 @@ gazebo_ros_control/pid_gains:
   wrist_1_joint: {p: 1.0, i: 0.0, d: 1.0}
   wrist_2_joint: {p: 1.0, i: 0.0, d: 1.0}
   wrist_3_joint: {p: 1.0, i: 0.0, d: 1.0}
+  gripper_finger1_joint: {p: 1.0, i: 0.0, d: 1.0}
+

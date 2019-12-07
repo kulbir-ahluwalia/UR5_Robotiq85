@@ -15,6 +15,14 @@
     transmission_hw_interface="$(arg transmission_hw_interface)"
   />
   <link name="world" />
+  
+   <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>ur5_robotiq</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo>
 
   <joint name="world_joint" type="fixed">
     <parent link="world" />
@@ -22,13 +30,7 @@
     <origin xyz="0.0 0.0 0.5" rpy="0.0 0.0 0.0" />
   </joint>
 
-   <gazebo>
-   <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-    <robotNamespace>ur5_robotiq</robotNamespace>
-    <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-    <legacyModeNS>true</legacyModeNS>
-  </plugin>
-  </gazebo>
+
 
   <xacro:include filename="$(find robotiq_85_description)/urdf/robotiq_85_gripper.urdf.xacro" />
 
